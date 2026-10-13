@@ -57,14 +57,16 @@ export default function Landing() {
           <div style={{ 
             display: window.innerWidth >= 768 ? 'flex' : 'none',
             alignItems: 'center',
-            gap: '32px'
+            gap: '24px'
           }}>
+            <Link to="/dashboard" style={{ textDecoration: 'none', color: '#4f46e5', fontWeight: 700 }}>Dashboard</Link>
+            <Link to="/products" style={{ textDecoration: 'none', color: '#64748b', fontWeight: 500 }}>Catalog</Link>
+            <Link to="/customers" style={{ textDecoration: 'none', color: '#64748b', fontWeight: 500 }}>Customers</Link>
+            <Link to="/analytics" style={{ textDecoration: 'none', color: '#64748b', fontWeight: 500 }}>Analytics</Link>
             <a href="#features" style={{ textDecoration: 'none', color: '#64748b', fontWeight: 500 }}>Features</a>
-            <a href="#how-it-works" style={{ textDecoration: 'none', color: '#64748b', fontWeight: 500 }}>How It Works</a>
-            <a href="#integrations" style={{ textDecoration: 'none', color: '#64748b', fontWeight: 500 }}>Integrations</a>
             <Link to="/login" style={{ textDecoration: 'none', color: '#64748b', fontWeight: 500 }}>Login</Link>
             <Link 
-              to="/signup"
+              to="/dashboard"
               style={{
                 padding: '10px 24px',
                 background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
@@ -163,10 +165,10 @@ export default function Landing() {
           </p>
           <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
             <Link 
-              to="/signup"
+              to="/dashboard"
               style={{
                 padding: '14px 32px',
-                background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+                background: 'linear-gradient(135deg, #4f46e5, #7c3aed)',
                 color: 'white',
                 borderRadius: '10px',
                 textDecoration: 'none',
@@ -179,30 +181,50 @@ export default function Landing() {
               }}
               onMouseOver={(e) => {
                 e.target.style.transform = 'translateY(-2px)'
-                e.target.style.boxShadow = '0 8px 24px rgba(59, 130, 246, 0.3)'
+                e.target.style.boxShadow = '0 8px 24px rgba(79, 70, 229, 0.4)'
               }}
               onMouseOut={(e) => {
                 e.target.style.transform = 'translateY(0)'
                 e.target.style.boxShadow = 'none'
               }}
             >
-              Get Started Free <ArrowRight size={18} />
+              Launch Live Workspace <ArrowRight size={18} />
             </Link>
-            <a 
-              href="#features"
+            <Link 
+              to="/products"
               style={{
-                padding: '14px 32px',
+                padding: '14px 28px',
                 background: 'white',
-                color: '#3b82f6',
+                color: '#4f46e5',
+                border: '1.5px solid #e0e7ff',
                 borderRadius: '10px',
                 textDecoration: 'none',
                 fontWeight: 600,
                 fontSize: '16px',
-                border: '2px solid #3b82f6',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '8px'
+              }}
+            >
+              Browse Catalog
+            </Link>
+            <a 
+              href="#features"
+              style={{
+                padding: '14px 28px',
+                background: '#f8fafc',
+                color: '#64748b',
+                border: '1.5px solid #e2e8f0',
+                borderRadius: '10px',
+                textDecoration: 'none',
+                fontWeight: 600,
+                fontSize: '16px',
+                display: 'inline-flex',
+                alignItems: 'center',
                 transition: 'background 0.2s'
               }}
-              onMouseOver={(e) => e.target.style.background = '#eff6ff'}
-              onMouseOut={(e) => e.target.style.background = 'white'}
+              onMouseOver={(e) => e.currentTarget.style.background = '#f1f5f9'}
+              onMouseOut={(e) => e.currentTarget.style.background = '#f8fafc'}
             >
               Explore Features
             </a>

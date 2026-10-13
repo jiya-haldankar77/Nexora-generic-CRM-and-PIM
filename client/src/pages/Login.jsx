@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
-import { Database, Eye, EyeOff, AlertCircle } from 'lucide-react'
+import { Database, Eye, EyeOff, AlertCircle, Sparkles } from 'lucide-react'
 import { useAuth } from '../context/AuthContext'
 import { Alert, Spinner } from '../components/UI'
 
@@ -10,7 +10,7 @@ export default function Login() {
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-  const { login, isAuthenticated } = useAuth()
+  const { login, loginAsDemo, isAuthenticated } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
 
@@ -209,6 +209,43 @@ export default function Login() {
             {loading ? <Spinner size={20} /> : null}
             {loading ? 'Signing in...' : 'Sign In'}
           </button>
+
+          <div style={{ marginTop: 14 }}>
+            <button
+              type="button"
+              onClick={() => {
+                loginAsDemo()
+                navigate('/dashboard')
+              }}
+              style={{
+                width: '100%',
+                padding: '12px',
+                background: '#f8fafc',
+                color: '#4f46e5',
+                border: '1.5px solid #e0e7ff',
+                borderRadius: '8px',
+                fontSize: '14px',
+                fontWeight: 600,
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '8px',
+                transition: 'all 0.2s',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#eef2ff'
+                e.currentTarget.style.borderColor = '#c7d2fe'
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = '#f8fafc'
+                e.currentTarget.style.borderColor = '#e0e7ff'
+              }}
+            >
+              <Sparkles size={16} color="#4f46e5" />
+              <span>Explore Demo Workspace (1-Click)</span>
+            </button>
+          </div>
         </form>
 
         {/* Footer */}
