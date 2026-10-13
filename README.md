@@ -7,13 +7,26 @@ A full-stack SaaS application for resource management, data orchestration, and t
 ![React](https://img.shields.io/badge/React-18+-61DAFB.svg)
 ![MongoDB](https://img.shields.io/badge/MongoDB-6+-47A248.svg)
 
+---
+
+## 📺 Video Walkthrough & Demo
+
+[![Watch Project Demo Video](https://img.shields.io/badge/▶%EF%B8%8F_Watch_Demo_Video-Google_Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1L3pk0fHz-vYoWhy0ZV-gYLB2PjrnFXaZ/view?usp=share_link)
+
+🎥 **Direct Video Link:** [https://drive.google.com/file/d/1L3pk0fHz-vYoWhy0ZV-gYLB2PjrnFXaZ/view?usp=share_link](https://drive.google.com/file/d/1L3pk0fHz-vYoWhy0ZV-gYLB2PjrnFXaZ/view?usp=share_link)
+
+---
+
 ## 🚀 Features
 
 ### Core Functionality
+- **Products & Catalog Management**: Visual card gallery & enterprise table views with high-res photography, SKU tracking, stock level health bars, category filtering, and quick-inspection modal
+- **Customer CRM Directory**: Customer 360° profiles with verified avatars, country flags, company roles, gross lifetime spend (LTV), order frequency, and VIP tier segmentation
+- **Interactive Data Analytics & Simulation**: Zero-dependency pure SVG bar charts, live metric toggles (Revenue, Orders, Customers), live forecast growth multiplier slider (-50% to +100%), and dynamic user data injection form
 - **Dynamic Resource Builder**: Create custom resource schemas with fields, validation rules, and workflows
 - **Generic Record Management**: CRUD operations for any resource type with search, filtering, and pagination
 - **Workflow Automation**: Configure lifecycle states and transitions for records
-- **Dashboard Analytics**: Real-time metrics for resources, records, sync status, and integrations
+- **Executive Dashboard**: Real-time unified metrics for catalog inventory, customer revenue, sync health, and integrations
 
 ### Integrations
 - **WooCommerce Integration**: Sync products, customers, and orders
